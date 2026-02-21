@@ -19,3 +19,5 @@ For Paste Image, copy this inside the `setting.json`:
     "pasteImage.showInputs": true
 }
 ```
+
+Also, remember to remap the CTRL+ALT+V in VScode, or it won't work.
