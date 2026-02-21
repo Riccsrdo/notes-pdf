@@ -10,7 +10,7 @@ They won't be corrected.
 Notes are inside different folders.
 You can find them in the file named `main.pdf`.
 
-For me:
+*For me*:
 Remember to install LatexWorkshop, HyperSnips (for snippets), Paste Image.
 For Paste Image, copy this inside the `setting.json`:
 ```json
