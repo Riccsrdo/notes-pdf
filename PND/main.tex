@@ -1,0 +1,117 @@
+\documentclass{report}
+
+% imports
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenx}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{amsmath}
+%\usepackage{chemformula}
+\usepackage{setspace}
+\usepackage{yfonts,color}
+%\usepackage{siunitx}
+%\usepackage{comment}
+%\usepackage{multirow}
+%\usepackage{varioref}
+%\usepackage[bottom]{footmisc}
+%\usepackage{wrapfig}
+\usepackage{float}
+%\usepackage{type1cm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\graphicspath{{images/}}
+\usepackage{lettrine}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+\usepackage{makecell}
+%\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{todonotes}
+%\usetikzlibrary{automata, positioning, arrows.meta, fit}
+
+\newenvironment{code}{\captionsetup{type=listing}}{\vspace{1em}}
+\SetupFloatingEnvironment{listing}{name=Snippet Codice}
+
+\usepackage{xurl}
+\linespread{0.9}
+%\usepackage{chngcntr}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+%\onehalfspacing
+%\counterwithout{footnote}{chapter}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{
+			hyperfootnotes=false,			
+			bookmarks=true,			
+			colorlinks=true,
+			linkcolor=red,
+                        linktoc=page,
+			anchorcolor=black,
+			citecolor=red,
+			urlcolor=blue,
+			pdftitle={Practical Network Defense},
+			pdfauthor={Riccardo},
+			pdfkeywords={sapienza, roma, university}
+ }
+
+%\title{Practical Network Defense}
+%\author{Riccardo}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering 
+    
+    \vspace*{-1cm}
+    {\Huge \textbf{Practical Network Defense}} \\
+    \vspace{0.5cm}
+    {\Large Notes collected during lessons. Not corrected.} \\
+    
+    \vspace{2cm}
+    {\large \textbf{Riccsrdo}} \\
+    \textit{Master Degree in Cybersecurity}
+
+    \vspace{2cm}
+    {\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/2026-02-21-14-13-44.png}
+        %\caption{Caption}
+        \label{fig:2026-02-21-14-13-44.png}
+    \end{figure}}
+    
+
+    \vspace{5cm}
+    {\textbf{IMPORTANT DISCLAIMER}: This notes have been taken
+    during lessons. They might contain errors (specifically, 
+    grammatical errors) and be incorrect. Please always check
+    other sources to confirm what is written is correct. \newline
+I    don't think I'll correct them after lessons, though it's possible. }
+    
+    \vfill
+    
+    {\large \today}
+\end{titlepage}
+
+\newpage
+
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{sections/1-Introduction.tex}
+
+
+
+% \newpage
+% \phantomsection
+
+% % \begin{thebibliography}{17}
+    
+% % \end{thebibliography}
+
+
+
+\end{document}
