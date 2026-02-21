@@ -7,6 +7,9 @@ Note that these are notes taken during lessons. They might contain errors,
 specifically grammatical errors :D.
 They won't be corrected.
 
+Notes are inside different folders.
+You can find them in the file named `main.pdf`.
+
 For me:
 Remember to install LatexWorkshop, HyperSnips (for snippets), Paste Image.
 For Paste Image, copy this inside the `setting.json`:
