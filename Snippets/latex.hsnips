@@ -1,0 +1,984 @@
+global
+function math(context) {
+    if (!context.scopes) return false;
+    // Targeting your exact VS Code scopes
+    return context.scopes.some(s => 
+        s.startsWith("meta.math") || 
+        s.startsWith("support.class.math") || 
+        s.includes("math.block")
+    );
+}
+function text(context) {
+    return !math(context);
+}
+endglobal
+
+// =======================
+// TEXT MODE SNIPPETS (Only trigger outside of equations)
+// =======================
+context text(context)
+snippet mk "Inline Math" A
+$$1$$0
+endsnippet
+
+context text(context)
+snippet dm "Display Math" Aw
+$$
+$1
+$$
+$0
+endsnippet
+
+context text(context)
+snippet mca "Mathcal A" A
+$\mathcal{A}$$0
+endsnippet
+
+context text(context)
+snippet mcb "Mathcal B" A
+$\mathcal{B}$$0
+endsnippet
+
+
+// =======================
+// MATH MODE SNIPPETS (Only trigger inside equations)
+// =======================
+context math(context)
+snippet tm "cdot" A
+\cdot
+endsnippet
+
+context math(context)
+snippet fal "forall" A
+\forall
+endsnippet
+
+context math(context)
+snippet nin "notin" A
+\notin 
+endsnippet
+
+context math(context)
+snippet espon "espon" A
+^{*} 
+endsnippet
+
+context math(context)
+snippet insvuoto "emptyset" A
+\emptyset
+endsnippet
+
+context math(context)
+snippet eps "epsilon" A
+\epsilon
+endsnippet
+
+context math(context)
+snippet clus "subset" A
+\subset
+endsnippet
+
+context math(context)
+snippet vuoto "vuoto" A
+\sqcup
+endsnippet
+
+context math(context)
+snippet sba "not" A
+\not
+endsnippet
+
+context math(context)
+snippet _ "_" A
+_{$1}$0
+endsnippet
+
+context math(context)
+snippet rd "rd" A
+^{$1}$0
+endsnippet
+
+context math(context)
+snippet cup "cup" A
+\cup
+endsnippet
+
+context math(context)
+snippet cap "cap" A
+\cap
+endsnippet
+
+context math(context)
+snippet sesolo "iff" A
+\iff
+endsnippet
+
+context math(context)
+snippet esis "exists" A
+\exists
+endsnippet
+
+context math(context)
+snippet compos "circ" A
+\circ
+endsnippet
+
+context math(context)
+snippet assoc "mapsto" A
+\mapsto
+endsnippet
+
+context math(context)
+snippet sopra "overset" A
+\overset{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet sotto "underset" A
+\underset{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet frac "frac" A
+\frac{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet // "frac quick" A
+\frac{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet triploug "equiv" A
+\equiv
+endsnippet
+
+context math(context)
+snippet mol "cdot" A
+\cdot
+endsnippet
+
+context math(context)
+snippet qed "blacksquare" A
+\blacksquare
+endsnippet
+
+context math(context)
+snippet parsot "underbrace" A
+\underbrace{$1}$0
+endsnippet
+
+context math(context)
+snippet parsop "overbrace" A
+\overbrace{$1}$0
+endsnippet
+
+context math(context)
+snippet tilde "tilde" A
+\textasciitilde
+endsnippet
+
+context math(context)
+snippet 3pn "ddots" A
+\ddots
+endsnippet
+
+context math(context)
+snippet Bo "fbox" A
+\fbox{$1}$0
+endsnippet
+
+context math(context)
+snippet xor "oplus" A
+\oplus
+endsnippet
+
+context math(context)
+snippet mc "mathcal" A
+\mathcal{$1}$0
+endsnippet
+
+context math(context)
+snippet lA "leftarrow" A
+\leftarrow$0
+endsnippet
+
+context math(context)
+snippet negl "negl" A
+\text{negl}(\lambda)$0
+endsnippet
+
+context math(context)
+snippet GG "mathbb G" A
+\mathbb{G}
+endsnippet
+
+context math(context)
+snippet sm "setminus" A
+\setminus
+endsnippet
+
+context math(context)
+snippet lm "lambda" A
+\lambda
+endsnippet
+
+context math(context)
+snippet spa "spacing" A
+\,\,\,\,\,\,\,\,\,\,\,
+endsnippet
+
+context math(context)
+snippet beg "begin/end" A
+\begin{$1}
+$2
+\end{$1}$0
+endsnippet
+
+// --- Greek Letters ---
+context math(context)
+snippet @a "alpha" A
+\alpha
+endsnippet
+
+context math(context)
+snippet @b "beta" A
+\beta
+endsnippet
+
+context math(context)
+snippet @g "gamma" A
+\gamma
+endsnippet
+
+context math(context)
+snippet @d "delta" A
+\delta
+endsnippet
+
+context math(context)
+snippet @e "epsilon" A
+\epsilon
+endsnippet
+
+context math(context)
+snippet @s "sigma" A
+\sigma
+endsnippet
+
+context math(context)
+snippet ome "omega" A
+\omega
+endsnippet
+
+// --- Visual Operations ---
+context math(context)
+snippet U "underbrace visual" A
+\underbrace{ $TM_SELECTED_TEXT }_{ $1 }$0
+endsnippet
+
+context math(context)
+snippet B "underset visual" A
+\underset{ $1 }{ $TM_SELECTED_TEXT }$0
+endsnippet
+
+context math(context)
+snippet C "cancel visual" A
+\cancel{ $TM_SELECTED_TEXT }$0
+endsnippet
+
+// --- Logic Words ---
+context math(context)
+snippet and "land" A
+\land
+endsnippet
+
+context math(context)
+snippet or "lor" A
+\lor
+endsnippet
+
+context math(context)
+snippet set "set" A
+\{ $1 \}$0
+endsnippet
+
+context math(context)
+snippet mod "pmod" A
+\pmod
+endsnippet
+
+// =======================
+// ENVIRONMENTS & BRACKETS
+// =======================
+context math(context)
+snippet pmat "pmatrix" A
+\begin{pmatrix}
+$1
+\end{pmatrix}$0
+endsnippet
+
+context math(context)
+snippet bmat "bmatrix" A
+\begin{bmatrix}
+$1
+\end{bmatrix}$0
+endsnippet
+
+context math(context)
+snippet case "cases" A
+\begin{cases}
+$1
+\end{cases}$0
+endsnippet
+
+context math(context)
+snippet align "align" A
+\begin{align}
+$1
+\end{align}$0
+endsnippet
+
+context math(context)
+snippet lr( "left right ()" A
+\left( $1 \right) $0
+endsnippet
+
+context math(context)
+snippet lr[ "left right []" A
+\left[ $1 \right] $0
+endsnippet
+
+context math(context)
+snippet lr{ "left right {}" A
+\left\{ $1 \right\} $0
+endsnippet
+
+context math(context)
+snippet avg "langle rangle" A
+\langle $1 \rangle $0
+endsnippet
+
+// =======================
+// REGEX MATH SNIPPETS
+// =======================
+context math(context)
+snippet `([^\\])(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega)` "Auto backslash Greek" A
+``rv = m[1]``\``rv = m[2]``
+endsnippet
+
+context math(context)
+snippet `\\(arcsin|arccos|arctan|arccot|arccsc|arcsec|sin|cos|tan|cot|csc)([A-Za-gi-z])` "Space after trig" A
+\``rv = m[1]`` ``rv = m[2]``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z])(\d)` "Auto letter subscript" A
+``rv = m[1]``_{``rv = m[2]``}
+endsnippet
+
+context math(context)
+snippet `([A-Za-z])_(\d\d)` "Auto subscript double digit" A
+``rv = m[1]``_{``rv = m[2]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])bar` "Auto bar" A
+\bar{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])hat` "Auto hat" A
+\hat{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])vec` "Auto vec" A
+\vec{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])dot` "Auto dot" A
+\dot{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])ddot` "Auto ddot" A
+\ddot{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `pa([A-Za-z])([A-Za-z])` "Partial auto" A
+\frac{ \partial ``rv = m[1]`` }{ \partial ``rv = m[2]`` } 
+endsnippet
+
+context math(context)
+snippet `\\bra{([^|]+)\|` "Convert bra to braket" A
+\braket{ ``rv = m[1]`` | $1 }$0
+endsnippet
+
+// =======================
+// MISSING MATH SYMBOLS & CALCULUS
+// =======================
+context math(context)
+snippet ooo "infty" A
+\infty
+endsnippet
+
+context math(context)
+snippet sum "sum" A
+\sum
+endsnippet
+
+context math(context)
+snippet prod "prod" A
+\prod
+endsnippet
+
+context math(context)
+snippet lim "limit" A
+\lim_{ ${1:n} \to ${2:\infty} } $0
+endsnippet
+
+context math(context)
+snippet oinf "int 0 to infty" A
+\int_{0}^{\infty} $1 \, d${2:x} $0
+endsnippet
+
+context math(context)
+snippet infi "int -infty to infty" A
+\int_{-\infty}^{\infty} $1 \, d${2:x} $0
+endsnippet
+
+context math(context)
+snippet dint "definite integral" A
+\int_{${1:0}}^{${2:\infty}} $3 \, d${4:x} $0
+endsnippet
+
+context math(context)
+snippet oint "oint" A
+\oint
+endsnippet
+
+context math(context)
+snippet iiint "iiint" A
+\iiint
+endsnippet
+
+context math(context)
+snippet iint "iint" A
+\iint
+endsnippet
+
+context math(context)
+snippet int "int" A
+\int $1 \, d${2:x} $0
+endsnippet
+
+context math(context)
+snippet pm "pm" A
+\pm
+endsnippet
+
+context math(context)
+snippet mp "mp" A
+\mp
+endsnippet
+
+context math(context)
+snippet ... "dots" A
+\dots
+endsnippet
+
+context math(context)
+snippet <-> "leftrightarrow" A
+\leftrightarrow 
+endsnippet
+
+context math(context)
+snippet -> "to" A
+\to
+endsnippet
+
+context math(context)
+snippet !> "mapsto" A
+\mapsto
+endsnippet
+
+context math(context)
+snippet invs "inverse" A
+^{-1}
+endsnippet
+
+context math(context)
+snippet \\\ "setminus" A
+\setminus
+endsnippet
+
+// =======================
+// MISSING LOGIC & RELATIONS
+// =======================
+context math(context)
+snippet => "implies" A
+\implies
+endsnippet
+
+context math(context)
+snippet =< "impliedby" A
+\impliedby
+endsnippet
+
+context math(context)
+snippet === "equiv" A
+\equiv
+endsnippet
+
+context math(context)
+snippet Sq "square" A
+\square
+endsnippet
+
+context math(context)
+snippet != "neq" A
+\neq
+endsnippet
+
+context math(context)
+snippet >= "geq" A
+\geq
+endsnippet
+
+context math(context)
+snippet <= "leq" A
+\leq
+endsnippet
+
+context math(context)
+snippet >> "gg" A
+\gg
+endsnippet
+
+context math(context)
+snippet << "ll" A
+\ll
+endsnippet
+
+context math(context)
+snippet ~~ "sim" A
+\sim
+endsnippet
+
+context math(context)
+snippet \sim ~ "approx" A
+\approx
+endsnippet
+
+context math(context)
+snippet prop "propto" A
+\propto
+endsnippet
+
+context math(context)
+snippet nabl "nabla" A
+\nabla
+endsnippet
+
+context math(context)
+snippet del "del" A
+\nabla
+endsnippet
+
+context math(context)
+snippet xx "times" A
+\times
+endsnippet
+
+context math(context)
+snippet ** "cdot double" A
+\cdot
+endsnippet
+
+context math(context)
+snippet para "parallel" A
+\parallel
+endsnippet
+
+// =======================
+// MISSING VARIABLES & FONTS
+// =======================
+context math(context)
+snippet xnn "x_n" A
+x_{n}
+endsnippet
+
+context math(context)
+snippet xii "x_i" A
+x_{i}
+endsnippet
+
+context math(context)
+snippet xjj "x_j" A
+x_{j}
+endsnippet
+
+context math(context)
+snippet xp1 "x_n+1" A
+x_{n+1}
+endsnippet
+
+context math(context)
+snippet ynn "y_n" A
+y_{n}
+endsnippet
+
+context math(context)
+snippet yii "y_i" A
+y_{i}
+endsnippet
+
+context math(context)
+snippet yjj "y_j" A
+y_{j}
+endsnippet
+
+context math(context)
+snippet mcal "mathcal" A
+\mathcal{$1}$0
+endsnippet
+
+context math(context)
+snippet mbb "mathbb" A
+\mathbb{$1}$0
+endsnippet
+
+context math(context)
+snippet ell "ell" A
+\ell
+endsnippet
+
+context math(context)
+snippet lll "lll" A
+\ell
+endsnippet
+
+context math(context)
+snippet LL "LL" A
+\mathcal{L}
+endsnippet
+
+context math(context)
+snippet HH "HH" A
+\mathcal{H}
+endsnippet
+
+context math(context)
+snippet CC "CC" A
+\mathbb{C}
+endsnippet
+
+context math(context)
+snippet RR "RR" A
+\mathbb{R}
+endsnippet
+
+context math(context)
+snippet QQ "QQ" A
+\mathbb{Q}
+endsnippet
+
+context math(context)
+snippet ZZ "ZZ" A
+\mathbb{Z}
+endsnippet
+
+context math(context)
+snippet NN "NN" A
+\mathbb{N}
+endsnippet
+
+context math(context)
+snippet II "II" A
+\mathbb{1}
+endsnippet
+
+context math(context)
+snippet AA "AA" A
+\mathcal{A}
+endsnippet
+
+context math(context)
+snippet BB "BB" A
+\mathbf{B}
+endsnippet
+
+context math(context)
+snippet EE "EE" A
+\mathbf{E}
+endsnippet
+
+context math(context)
+snippet :i "i unit" A
+\mathbf{i}
+endsnippet
+
+context math(context)
+snippet :j "j unit" A
+\mathbf{j}
+endsnippet
+
+context math(context)
+snippet :k "k unit" A
+\mathbf{k}
+endsnippet
+
+context math(context)
+snippet :x "x unit" A
+\hat{\mathbf{x}}
+endsnippet
+
+context math(context)
+snippet :y "y unit" A
+\hat{\mathbf{y}}
+endsnippet
+
+context math(context)
+snippet :z "z unit" A
+\hat{\mathbf{z}}
+endsnippet
+
+// =======================
+// MISSING DERIVATIVES
+// =======================
+context math(context)
+snippet par "partial" 
+\frac{ \partial ${1:y} }{ \partial ${2:x} } $0
+endsnippet
+
+context math(context)
+snippet pa2 "partial 2" A
+\frac{ \partial^{2} ${1:y} }{ \partial ${2:x}^{2} } $0
+endsnippet
+
+context math(context)
+snippet pa3 "partial 3" A
+\frac{ \partial^{3} ${1:y} }{ \partial ${2:x}^{3} } $0
+endsnippet
+
+context math(context)
+snippet ddt "d/dt" A
+\frac{d}{dt}
+endsnippet
+
+// =======================
+// MISSING PHYSICS & CHEMISTRY
+// =======================
+context math(context)
+snippet kbt "k_B T" A
+k_{B}T
+endsnippet
+
+context math(context)
+snippet hba "hbar" A
+\hbar
+endsnippet
+
+context math(context)
+snippet dag "dagger" A
+^{\dagger}
+endsnippet
+
+context math(context)
+snippet o+ "oplus" A
+\oplus
+endsnippet
+
+context math(context)
+snippet otimes "otimes" A
+\otimes
+endsnippet
+
+context math(context)
+snippet bra "bra" A
+\bra{$1} $0
+endsnippet
+
+context math(context)
+snippet ket "ket" A
+\ket{$1} $0
+endsnippet
+
+context math(context)
+snippet brk "braket" A
+\braket{ $1 | $2 } $0
+endsnippet
+
+context math(context)
+snippet outp "outer product" A
+\ket{${1:\psi}} \bra{${1:\psi}} $0
+endsnippet
+
+context math(context)
+snippet pu "pu chem" A
+\pu{ $1 }
+endsnippet
+
+context math(context)
+snippet msun "solar mass" A
+M_{\odot}
+endsnippet
+
+context math(context)
+snippet solm "solar mass 2" A
+M_{\odot}
+endsnippet
+
+context math(context)
+snippet ce "ce chem" A
+\ce{ $1 }
+endsnippet
+
+context math(context)
+snippet iso "isotope" A
+{}^{${1:4}}_{${2:2}}${3:He}
+endsnippet
+
+context math(context)
+snippet hel4 "helium 4" A
+{}^{4}_{2}He
+endsnippet
+
+context math(context)
+snippet hel3 "helium 3" A
+{}^{3}_{2}He
+endsnippet
+
+// =======================
+// MISSING ENVIRONMENTS & BRACKETS
+// =======================
+context math(context)
+snippet Bmat "Bmatrix" A
+\begin{Bmatrix}
+$1
+\end{Bmatrix}$0
+endsnippet
+
+context math(context)
+snippet vmat "vmatrix" A
+\begin{vmatrix}
+$1
+\end{vmatrix}$0
+endsnippet
+
+context math(context)
+snippet Vmat "Vmatrix" A
+\begin{Vmatrix}
+$1
+\end{Vmatrix}$0
+endsnippet
+
+context math(context)
+snippet array "array" A
+\begin{array}
+$1
+\end{array}$0
+endsnippet
+
+context math(context)
+snippet matrix "matrix" A
+\begin{matrix}
+$1
+\end{matrix}$0
+endsnippet
+
+context math(context)
+snippet norm "norm" A
+\lvert $1 \rvert $0
+endsnippet
+
+context math(context)
+snippet lr| "left right pipe" A
+\left| $1 \right| $0
+endsnippet
+
+context math(context)
+snippet lra "left right angle" A
+\left< $1 \right> $0
+endsnippet
+
+context math(context)
+snippet tayl "taylor" A
+${1:f}(${2:x} + ${3:h}) = ${1:f}(${2:x}) + ${1:f}'(${2:x})${3:h} + ${1:f}''(${2:x}) \frac{${3:h}^{2}}{2!} + \dots$0
+endsnippet
+
+// =======================
+// MISSING REGEX SNIPPETS
+// =======================
+context math(context)
+snippet `sts` "text subscript" A
+_\text{$1}$0
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z]),\.` "mathbf dot" A
+\mathbf{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])\.,` "mathbf dot 2" A
+\mathbf{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `\\hat{([A-Za-z])}(\d)` "hat subscript" A
+\hat{``rv = m[1]``}_{``rv = m[2]``}
+endsnippet
+
+context math(context)
+snippet `\\\\mathbf{([A-Za-z])}(\d)` "mathbf subscript" A
+\mathbf{``rv = m[1]``}_{``rv = m[2]``}
+endsnippet
+
+context math(context)
+snippet `\\\\vec{([A-Za-z])}(\d)` "vec subscript" A
+\vec{``rv = m[1]``}_{``rv = m[2]``}
+endsnippet
+
+context math(context)
+snippet `([a-zA-Z])und` "underline auto" A
+\underline{``rv = m[1]``}
+endsnippet
+
+context math(context)
+snippet `pa([A-Za-z])([A-Za-z])([A-Za-z])` "Partial auto 3" A
+\frac{ \partial^{2} ``rv = m[1]`` }{ \partial ``rv = m[2]`` \partial ``rv = m[3]`` }
+endsnippet
+
+context math(context)
+snippet `pa([A-Za-z])([A-Za-z])2` "Partial auto 2" A
+\frac{ \partial^{2} ``rv = m[1]`` }{ \partial ``rv = m[2]``^{2} }
+endsnippet
+
+context math(context)
+snippet `de([A-Za-z])([A-Za-z])` "Deriv auto" A
+\frac{ d``rv = m[1]`` }{ d``rv = m[2]`` }
+endsnippet
+
+context math(context)
+snippet `de([A-Za-z])([A-Za-z])2` "Deriv auto 2" A
+\frac{ d^{2}``rv = m[1]`` }{ d``rv = m[2]``^{2} }
+endsnippet
+
+context math(context)
+snippet `\\\\(arcsinh|arccosh|arctanh|arccoth|arcsch|arcsech|sinh|cosh|tanh|coth|csch)([A-Za-z])` "Space after trig 2" A
+\``rv = m[1]`` ``rv = m[2]``
+endsnippet
+
+context math(context)
+snippet `\\\\(neq|geq|leq|gg|ll|sim)([0-9]+)` "Space after inequality" A
+\``rv = m[1]`` ``rv = m[2]``
+endsnippet
+
+context math(context)
+snippet `\\\\bra{(.+)}([^ ]+)>` "Convert bra to braket alt" A
+\braket{ ``rv = m[1]`` | $0 }
+endsnippet
