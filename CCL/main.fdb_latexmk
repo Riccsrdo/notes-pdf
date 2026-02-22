@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771680641.52522 "/home/riccardo/Scrivania/notes-pdf/CCL/main.tex" "main.pdf" "main" 1771680644.44918 0
-  "/home/riccardo/Scrivania/notes-pdf/CCL/main.tex" 1771680638.2242 2628 234e035f111f78d7e77fb4307c71e75d ""
+["pdflatex"] 1771706508.84567 "/home/riccardo/Scrivania/notes-pdf/CCL/main.tex" "main.pdf" "main" 1771706511.39158 0
+  "/home/riccardo/Scrivania/notes-pdf/CCL/main.tex" 1771706508.48695 2630 bb2b382c7f07464c27eb2d70c09d189e ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1767555874 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1767555874 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -179,10 +179,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771577360 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771577304 2008245 6a907d3b7f86891fda2a090cec9cd071 ""
   "images/2026-02-21-14-29-54.png" 1771680594.26075 77238 77b3c8e04638566d16577122a0a6d762 ""
-  "main.aux" 1771680644.22755 646 17d6edfa665f17d31bde37e18490318d "pdflatex"
-  "main.out" 1771680644.22755 103 4d47afb7107a54a21b0d2c438b3c2bd0 "pdflatex"
-  "main.tex" 1771680638.2242 2628 234e035f111f78d7e77fb4307c71e75d ""
-  "main.toc" 1771680644.22755 68 3855bd05385d515e00ab58444ec7ce3a "pdflatex"
+  "main.aux" 1771706511.16362 646 17d6edfa665f17d31bde37e18490318d "pdflatex"
+  "main.out" 1771706511.16696 103 4d47afb7107a54a21b0d2c438b3c2bd0 "pdflatex"
+  "main.tex" 1771706508.48695 2630 bb2b382c7f07464c27eb2d70c09d189e ""
+  "main.toc" 1771706511.16696 68 3855bd05385d515e00ab58444ec7ce3a "pdflatex"
   "sections/1-Introduction.tex" 1771677301.92269 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "main.aux"
