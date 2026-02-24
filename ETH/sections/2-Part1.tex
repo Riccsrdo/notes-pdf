@@ -1,0 +1,72 @@
+We'll start with taking a look at \textbf{Footprinting, Scanning} and 
+\textbf{Enumeration}. \newline
+\newline Attackers, before performing an attack, will perform 
+some kind of investigation to determine the vulnerabilities
+they can use at their own advantage. We are considering 
+professional hackers, who don't want to be detected 
+when they're entering the system. \newline 
+Attackers behave as insiders when breaking a system, even 
+if he could be outside the company. When we perform 
+Ethical Hacking, we need to be inside the company, having
+the same vision an hacker has. \newline 
+Also, the major concern of an hacker is to be anonymous, 
+as well as being stealty. At the basic of anonymity there 
+is \texttt{Tor Project}. As the graphical user interface
+for Tor, Vidalia is used, while for web filtering proxy
+we have Privoxy. To solve IP addresses, it's possible to 
+do this Tor as well, with \texttt{tor-resolve}. 
+For proxychains, \texttt{Nmap} is well known. It's a tool 
+that allows to do some sophisticated protocols. Once another 
+tool is given by \texttt{nc} (netcat), used to send 
+requests to servers. 
+
+\subsubsection{Onion Router (TOR)}
+We have the usual scheme, with Alice wanting to talk with 
+Bob. However, they want the possibility to deny they're
+communicating, leaving no trace of their communication.
+The protocol works with three layers of routers, 
+located around the world, and there are hundreds of thousand 
+of them. Alice will pick three random routers. These 
+routers will have special names: \texttt{guard node}, the 
+node to which Alice is talking (entry point of the network);
+\texttt{exit-node}. This is called Onion Router because 
+the packet that is used is composed by many envelops. 
+The main message is covered in many other messages. 
+We have both encrypted and unencrypted links. 
+Encryption is implemented by Tor protocol, but on top 
+of this we can have more encryption on top of it. 
+Tor protocol is also transparent to the communication. 
+The packet being sent is encrypted three times, with three 
+different keys, one after the other. The key is given 
+by the Tor node that Alice has selected. Each node has 
+a public and a private key. The guard node is the most 
+external envelope of the encryption. The guard node then 
+decrypts the outside of the message, forwarding it to the 
+second node. \newline
+So the sender prepares these onion messages, with every node 
+removing one layer, and passing it to the next of the three 
+nodes (randomly picked nodes). \newline
+\textit{Correct this part, I got a bit lost}. 
+
+\section{Footprinting}
+So far, we've seen tools to find information about the 
+target we attack. Before that, however, Footprinting is 
+performed. It works without even sending to the target a 
+single packet. So, we need to find information about the 
+organization without even interacting. 
+Footprinting should be executed also by us Ethical Hackers. 
+This is internet Footprinting:
+\begin{enumerate}
+    \item Determine the scope of your activities: we need to 
+    understand what I actually need to do, avoiding to 
+    inadvertively commiting crimes. 
+    \item Get proper authorization: the scope should be 
+    linked with our authorization to the system. The contract 
+    will tell us what we can and what we cannot do. 
+    \item Check publicly available information
+    \item WHOIS \& DNS enumeration 
+    \item DNS interrogation 
+    \item Network Reconnaissance
+\end{enumerate}
+
+
