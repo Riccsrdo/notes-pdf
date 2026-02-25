@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  21 FEB 2026 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  25 FEB 2026 18:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1245,7 +1245,7 @@ Package hyperref Info: Link coloring ON on input line 63.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-<images/2026-02-21-14-13-44.png, id=11, 320.19624pt x 158.5925pt>
+<images/2026-02-21-14-13-44.png, id=15, 320.19624pt x 158.5925pt>
 File: images/2026-02-21-14-13-44.png Graphic file (type png)
 <use images/2026-02-21-14-13-44.png>
 Package pdftex.def Info: images/2026-02-21-14-13-44.png  used on input line 80.
@@ -1269,12 +1269,34 @@ l.103 \chapter
 
 ]
 Chapter 1.
-(./sections/1-Introduction.tex)
+(./sections/1-Introduction.tex
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
 
 [2
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260221141819 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+Chapter 2.
+(./sections/1-25_02_2026.tex)
+
+[3
+
+]
+runsystem(latexminted cleantemp  --timestamp 20260225181545 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1282,21 +1304,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4D47AFB7107A54A21B0D2C438B3C2BD0;103.
+(rerunfilecheck)             Checksum: 70DC725EA7111E36D5281C0DA6A6FB23;179.
  ) 
 Here is how much of TeX's memory you used:
- 29539 strings out of 475171
- 578209 string characters out of 5767095
+ 29640 strings out of 475171
+ 580019 string characters out of 5767095
  1084349 words of memory out of 5000000
- 52016 multiletter control sequences out of 15000+600000
- 562798 words of font info for 65 fonts, out of 8000000 for 9000
+ 52084 multiletter control sequences out of 15000+600000
+ 564865 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  96i,6n,101p,1040b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (3 pages, 207500 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (4 pages, 222419 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 20506 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 25122 words of extra memory for PDF output out of 29859 (max. 10000000)
 
