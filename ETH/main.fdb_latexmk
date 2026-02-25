@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1772009458.1411 "/home/riccardo/Scrivania/notes-pdf/ETH/main.tex" "main.pdf" "main" 1772009461.09415 0
+["pdflatex"] 1772009487.70055 "/home/riccardo/Scrivania/notes-pdf/ETH/main.tex" "main.pdf" "main" 1772009490.73593 0
   "/home/riccardo/Scrivania/notes-pdf/ETH/main.tex" 1772009229.77018 2753 b777f6aaa2df7951ad8d306c4f225f6c ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1767555874 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -195,13 +195,13 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771577360 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771577304 2008245 6a907d3b7f86891fda2a090cec9cd071 ""
   "images/2026-02-21-14-20-33.png" 1771680033.82537 123184 ba892bebbe9f001e4390bb4127942a0e ""
-  "main.aux" 1772009460.85019 2173 7436f8eb04cd9776f3c83628e3c6aff6 "pdflatex"
-  "main.out" 1772009460.85019 650 31258508005c36ead81f47f33633a5a4 "pdflatex"
+  "main.aux" 1772009490.47686 2049 42b45ef1bc64ff6cab785ec614fe1414 "pdflatex"
+  "main.out" 1772009490.47686 650 31258508005c36ead81f47f33633a5a4 "pdflatex"
   "main.tex" 1772009229.77018 2753 b777f6aaa2df7951ad8d306c4f225f6c ""
-  "main.toc" 1772009460.85019 433 1d7f3827fb134529d5141d8e86fc78d2 "pdflatex"
+  "main.toc" 1772009490.48019 497 dc47df66b6490268cb06de0834a81cd7 "pdflatex"
   "sections/1-24_02_26.tex" 1772002852.07334 3461 66d86e2a569fa405116699b1ffbc7085 ""
   "sections/1-Introduction.tex" 1771920861.05337 1082 cfacaef69a279303f83aa9bb8eadfb40 ""
-  "sections/2-25_02_26.tex" 1772009457.79352 4951 5ab1fbb0b5eb5eb47a72751cc2f5eec4 ""
+  "sections/2-25_02_26.tex" 1772009484.35352 4961 8d09f28f3595951445aa684fb28edfc0 ""
   (generated)
   "main.aux"
   "main.log"
