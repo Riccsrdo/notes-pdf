@@ -1,0 +1,95 @@
+Why is footprinting important? Hackers need to collect 
+information about the target, without this phase they
+will not be able to execute the attack. \todo{25-02-2026}
+Thus, profiling 
+of an organization. What can we get about the target 
+organization publicly? 
+\begin{itemize}
+    \item Internet: domain names, network blocks, IP
+    addresses, TCP/UDP services;
+    \item Intranet: network protocols, internal domain names,
+    services, access control;
+    \item Remote access: remote system type, auth. mechanisms, 
+    VPN;
+    \item Extranet: large organizations usually have partners, 
+    so their network can be connected to partner's 
+    network, and hackers could get into the network 
+    through the partner.
+\end{itemize}
+
+Let's start with internet footprinting. First of all, as 
+a defender we need to choose the scope of our activity, we 
+have to agree with the management what do we have do to, 
+like profiling the entire organization or only a part. 
+For the full organization, it may be worth but also very 
+time consuming, as it might need a lot of employes. 
+The relation between us an the management needs to be clear. 
+All activities related to penetration testing and ethical 
+hacking needs to be accepted by the management. \newline 
+So, the second step is getting proper authorization. A 
+proper funding is necessary to do this step. \newline 
+\newline Let's now see the company web pages. They have public pages, 
+what is shown, and private, they're not shown but they're 
+still there. By looking at web pages, it's possible to 
+identify security configurations, asset inventory, and 
+other documents. We can also find the HTML source code, 
+it gives information specifically in comments, which could 
+cointain important elements like passwords. As a defender, 
+we can query the web pages as much as we want, while as
+attackers we'll have to use some mirroring tools, like 
+\texttt{wget}, doing then an analysis offline, on a local
+copy. Also, there are hidden files, and we can use 
+tools like \texttt{OWASP}. After all these steps, we need 
+to repeat this process for all websites of the company, like
+\texttt{www1, www2, web, test}, as well as VPN sites. \newline 
+After we've done this, we need to consider related 
+organizations. Attacks like social engineering could 
+be portraided. \newline
+\newline Next step is collecting employes information. Information 
+like their names, email addresses, phone numbers, other 
+personal details (like home addresses), social network 
+details, etc. \newline
+\newline Alongside this, we can take a look at job 
+postings and resumes. Also, at how the company is doing, 
+like the economical state of it. Look for merges, acquisitions, 
+scandals, outsourcing. For example, if we deal with merge 
+and acquisition, there needs to be a merge of two IT 
+systems, which could be problematic and messy. As a consequence, 
+security decreases. In addition to this, we have the 
+human factor, with a lot of work to do, low morale, etc. \newline
+We can also take a look at archived information about the 
+organization, cached and maintained in other websites. 
+Services like \texttt{archive.org} does the work for us. \newline
+\newline What is the counter measure for all of this? We need 
+to periodically review and remove public sensitive data, as 
+much as possible. \newline
+\newline Once another source is given by WHOIS and DNS 
+enumeration. Internet is completely distributed, there are 
+independent routers everywhere. However, the management
+is centralized. The ICANN organization deals with the 
+management part, assigning and guarateeng correspondences 
+between names and physical addresses. This database of 
+logical names and IPs is also distributed, and is handled
+by two services, WHOIS and ??. By querieng this services, 
+we can get a lot of information about the organization, like 
+IP addresses, name, mail services domains, etc. \newline
+\newline Also the information contained in DNS servers 
+could be quite useful. DNS could be queried (but it could 
+be slow), or perform DNS zone transfer. This operation is 
+useful to transfer information to increase reliability. 
+However, when this takes place all the information 
+is transfered between one machine to one another, and any 
+attacker can do that. A specific tool is given by \texttt{dnsrecon}.
+Another command is given by \texttt{nslookup}. \newline
+What are the countermeasures? We can restrict transfers 
+only to authorized servers, use a firewall, denying all
+unauthorized connections to port TCP 53, and also not to 
+put relevant information on HINFO records. \newline
+\newline After we've collected all this data, we can perform 
+network reconnaissance. It allows an hacker to identify 
+network topology, and requires the sending of packets. 
+Tools like \texttt{traceroute} can be used. The countermeasures 
+are given by intrusion detection systems, blocking 
+ICMP packets and UPD traffic. 
+
+\subsubsection{Do the homework!}
