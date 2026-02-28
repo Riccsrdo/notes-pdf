@@ -1,0 +1,60 @@
+Internet Standards enumerates design documents that
+states how things work on the Internet.\todo{26/02/2026} \newline
+\newline Remember the structure of the internet 
+(hierarchical structure), 
+given by the Backbone, then the ISPs, then organizations 
+and LANs. ISPs, especially, can be divided into three 
+layers, from Tier 1 to Tier 3. \newline
+\newline We also have this hierarchy:
+\begin{enumerate}
+    \item Network Edge
+    \item ?
+\end{enumerate}
+
+The number of Tier 1 ISPs is quite limited, like Verizon. 
+These ones are connected to IXP (Internet Exchange Points),
+which is like a switch where every company can plug its 
+cables. \newline
+\newline Who generates traffic? A LAN, typically. Usually, 
+this LAN is able to cover only a small and localized 
+area of hosts. The strucuture of a LAN is given by 
+several hosts, connected to an edge router (gateway). 
+This is a two-sided device, with one side being inside 
+the LAN, and the other connected to the global Internet. 
+A lot of protocols are used in the functioning of this 
+mechanism. Remember that a single packet is encapsulated 
+into different protocols. We need this encapsulation 
+for several aadvantages. The upper layer protocols could 
+always be the same, and we canj change lower layers 
+without impacting anything. We can, for example, use a 
+TCP packet over IP, and so on. \newline
+\newline A local host is an host which can communicate 
+directly with as local hosts. For remote hosts it's different, 
+as we need to go through other routers to reach 
+the other destination (so two local hosts have a direct
+link between them). \newline
+\newline Ethernet frames are used in this case. The
+packet contains some fields like the preamble and SFD, 
+which are used for synchronization. We also have destination 
+and source, those contains addresses, which are called 
+MAC addresses. They're 48 bits longs. We then have the 
+payload and the frame clousure bits. \newline 
+How do we build an Ethernet network? Specifically, 
+in the real world we have several channels connected to 
+a switch. So, we have many hosts connected to a single 
+device, which moves packets into the Ethernet. The idea 
+is that every single packet inserted into an Ethernet
+network can reach any other host in the network domain, 
+that's why we call this the broadcast domain. ARP, for 
+example, uses broadcast messages. \newline 
+Switches, however, 
+do not always broadcast. Rather, it sends the packet 
+on the link associated to the ethernet destination field 
+addressed. Why Internet is not a large Ethernet network?
+As we make a lot of use of broadcasts, which could not 
+be suitable. We need to distinguish between a logical 
+division of the network, and a physical one (for IP). \newline 
+\textit{Part missing}. 
+
+\section{Practical Part}
+
