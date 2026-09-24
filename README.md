@@ -22,3 +22,4 @@ Notes are inside different folders. Please, read the README in the specific subj
 - `CPHY` → Systems and Control Methods for Cyber Physical Security, A.Y. 25/26
 - `CCL` → Cyber and Computer Law, A.Y. 25/26
 - `CSAP`→ Computer Systems and Programming, A.Y. 25/26
+- 'SPOSE' → Security and Privacy of Smart Environments, A.Y. 26/27
